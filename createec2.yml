@@ -1,0 +1,23 @@
+---
+- name: creating ec2 instance
+  hosts: server
+  gather_facts: no
+  remote_user: root
+  become: true
+  tasks:
+          - name: create ec2 instance
+            ec2:
+                    key_name: India-KP
+                    instance_type: t2.micro
+                    image: ami-010aff33ed5991201
+                    wait: true
+                    group: Web-Access
+                    count: 1
+                    region: ap-south-1
+                    state: present
+                    aws_access_key: "AKIAUMFTTWR3ZOL7H4W7"
+                    aws_secret_key: "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"
+                    instance_tags:
+                            Name: Myec2ins1
+            register: ec2 
+                           
