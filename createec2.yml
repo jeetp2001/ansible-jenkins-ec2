@@ -15,8 +15,8 @@
                     count: 1
                     region: ap-south-1
                     state: present
-                    aws_access_key: "AKIAUMFTTWR36VPJIESG"
-                    aws_secret_key: "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"
+                    aws_access_key: "-"
+                    aws_secret_key: "-"
                     instance_tags:
                             Name: Myec2ins1
             register: ec2 
